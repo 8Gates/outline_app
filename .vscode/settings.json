@@ -1,0 +1,15 @@
+{
+    "[dart]": {
+        "editor.rulers": [],
+        "editor.formatOnType": false,
+        "editor.formatOnPaste": false,
+        "editor.formatOnSave": false
+    },
+    "dart.lineLength": 100,
+    "editor.rulers": [],
+    "html.format.enable": false,
+    "html.format.preserveNewLines": false,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false
+}
