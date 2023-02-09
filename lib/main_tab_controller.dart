@@ -25,13 +25,27 @@ class MainTabController extends StatelessWidget {
       initialIndex: 0,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(title),
+          title: Text(title, style: const TextStyle(fontFamily: 'Road_Rage'),),
+          backgroundColor: const Color.fromARGB(255, 200, 55, 0),
           centerTitle: true,
-          bottom: const TabBar(tabs: tabs),
-        ),
-        body: TabBarView(children: screens,
-        )
+          bottom: ColoredTabBar(const TabBar(tabs: tabs,))
+          ),
+          body: TabBarView(children: screens,)
       )
     );
   }
+}
+
+class ColoredTabBar extends Container implements PreferredSizeWidget {
+  ColoredTabBar(this.tabBar, {super.key});
+  final TabBar tabBar;
+
+  @override
+  Size get preferredSize => tabBar.preferredSize;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    color: const Color.fromARGB(255, 180, 180, 180),
+    child: tabBar,
+  );
 }

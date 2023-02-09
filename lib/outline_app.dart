@@ -10,7 +10,7 @@ class OutlineApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-          primarySwatch: Colors.teal,
+          primarySwatch: Colors.red,
           scaffoldBackgroundColor: const Color.fromARGB(255, 225, 250, 255)),
       home: MainTabController(),
     );
