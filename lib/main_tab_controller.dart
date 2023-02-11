@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'main_drawer.dart';
+
 class MainTabController extends StatelessWidget {
   final String title = 'First Outline';
   
@@ -30,6 +32,7 @@ class MainTabController extends StatelessWidget {
           centerTitle: true,
           bottom: ColoredTabBar(const TabBar(tabs: tabs,))
           ),
+          drawer: const MainDrawer(),
           body: TabBarView(children: screens,)
       )
     );
