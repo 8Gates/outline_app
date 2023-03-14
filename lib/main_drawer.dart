@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'outline_app.dart';
 
-class MainDrawer extends StatelessWidget {
-  const MainDrawer({super.key});
+class MainDrawer extends StatefulWidget {
+  final darkMode;
+  final void Function() flipDarkMode;
+  const MainDrawer(this.darkMode, {super.key, required this.flipDarkMode});
 
+  @override
+  State<MainDrawer> createState() => _MainDrawerState();
+}
+
+class _MainDrawerState extends State<MainDrawer> {
   @override
   Widget build(BuildContext context) {
     List<Widget> drawerTiles = [
@@ -13,23 +21,43 @@ class MainDrawer extends StatelessWidget {
       ),
       onTap: () { Navigator.pop(context); }
     ),
-    aListTile('Fishing'), 
-    aListTile('Hunting'),
-    aListTile('Camping'),
-    aListTile('Swimming'),
-    aListTile('Visitor Center'),
+    ListTile(
+      title: Text(
+        'Dark Mode', style: widget.darkMode? lightTxt() : darkTxt()
+      ),
+      trailing: Switch(
+        value: widget.darkMode,
+        onChanged: (bool value){
+          setState(() {
+            widget.flipDarkMode();
+          });
+        }),
+    ),
+    aListTile('Fishing', widget.darkMode), 
+    aListTile('Hunting', widget.darkMode),
+    aListTile('Camping', widget.darkMode),
+    aListTile('Swimming', widget.darkMode),
+    aListTile('Visitor Center', widget.darkMode),
   ];
     return Drawer(
-      backgroundColor: const Color.fromARGB(255, 37, 37, 37), 
+      backgroundColor: widget.darkMode? const Color.fromARGB(255, 37, 37, 37) : Colors.white, 
       child: ListView(children: drawerTiles,)
     );
   }
 }
 
-Widget aListTile(String text){
+Widget aListTile(String text, darkMode){
   return ListTile(
     title: Text(text, 
-      style: const TextStyle(color: Colors.white)
+      style: darkMode? lightTxt() : darkTxt()
     )
   );
+}
+
+TextStyle lightTxt(){
+  return const TextStyle(color: Colors.white);
+}
+
+TextStyle darkTxt(){
+  return const TextStyle(color: Colors.black);
 }
