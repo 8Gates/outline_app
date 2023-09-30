@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'main_drawer.dart';
+import 'radio buttons/list_tile_park.dart';
 
 class MainTabController extends StatefulWidget {
   static const tabs = [
     Tab(icon: Icon(Icons.home)),
-    Tab(icon: Icon(Icons.description_rounded)),
-    Tab(icon: Icon(Icons.question_answer_outlined)),
+    Tab(icon: Icon(Icons.sunny_snowing)),
+    Tab(icon: Icon(Icons.edit_note)),
     Tab(icon: Icon(Icons.dangerous)),
   ];
 
@@ -17,11 +18,11 @@ class MainTabController extends StatefulWidget {
 }
 
 class _MainTabControllerState extends State<MainTabController> {
-  final String title = 'First Outline';
+  final String title = 'National Parks';
   bool darkMode = false;
 
   final screens = [
-    const Align(alignment: Alignment.center, child: Text('temp screen 1')),
+    const Align(alignment: Alignment.center, child: ListTilePark()),
     const Align(alignment: Alignment.center, child: Text('temp screen 2')),
     const Align(alignment: Alignment.center, child: Text('temp screen 3')),
     const Align(alignment: Alignment.center, child: Text('temp screen 4')),
