@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:outline_app/screens/screen2.dart';
+import 'package:outline_app/screens/screen3.dart';
 
 import 'main_drawer.dart';
-import 'radio buttons/list_tile_park.dart';
+import 'list_tiles/list_tile_park.dart';
 
 class MainTabController extends StatefulWidget {
   static const tabs = [
@@ -23,8 +25,8 @@ class _MainTabControllerState extends State<MainTabController> {
 
   final screens = [
     const Align(alignment: Alignment.center, child: ListTilePark()),
-    const Align(alignment: Alignment.center, child: Text('temp screen 2')),
-    const Align(alignment: Alignment.center, child: Text('temp screen 3')),
+    const SecondScreen(),
+    const ThirdScreen(),
     const Align(alignment: Alignment.center, child: Text('temp screen 4')),
   ];
 
