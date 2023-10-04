@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:outline_app/screens/screen2.dart';
 import 'package:outline_app/screens/screen3.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import 'main_drawer.dart';
 import 'list_tiles/list_tile_park.dart';
 
@@ -21,7 +21,7 @@ class MainTabController extends StatefulWidget {
 
 class _MainTabControllerState extends State<MainTabController> {
   final String title = 'National Parks';
-  bool darkMode = false;
+  late bool darkMode = false;
 
   final screens = [
     const Align(alignment: Alignment.center, child: ListTilePark()),
@@ -30,10 +30,27 @@ class _MainTabControllerState extends State<MainTabController> {
     const Align(alignment: Alignment.center, child: Text('temp screen 4')),
   ];
 
-  void flipDarkMode(){
+  @override
+  void initState(){
+    super.initState();
+    initDarkMode();
+  }
+
+  void initDarkMode() async{
+    late bool initDark;
+    final SharedPreferences preferences = await SharedPreferences.getInstance();
+    preferences.getBool('darkMode') == null ? preferences.setBool('darkMode', false) : initDark = preferences.getBool('darkMode')!;
+    setState(() { 
+      darkMode = initDark;
+    });
+  }
+
+  Future<void> flipDarkMode() async {
     setState(() {
       darkMode = !darkMode;
     });
+    final SharedPreferences preferences = await SharedPreferences.getInstance();
+    preferences.setBool('darkMode', darkMode);
   }
 
   @override
