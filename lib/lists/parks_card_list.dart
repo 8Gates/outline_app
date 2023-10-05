@@ -1,28 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:outline_app/screens/screen3.dart';
 
 
 enum NationalPark { yellowStone, yosemite, rainier }
 
-class ListTilePark extends StatefulWidget {
-  const ListTilePark({super.key});
+class ParksCardList extends StatefulWidget {
+  const ParksCardList({super.key});
 
   @override
-  State<ListTilePark> createState() => ListTileParkState();
+  State<ParksCardList> createState() => ParksCardListState();
 }
 
-class ListTileParkState extends State<ListTilePark> {
-  NationalPark? _park = NationalPark.yellowStone;
-
+class ParksCardListState extends State<ParksCardList> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         Container(
           decoration: const BoxDecoration(shape: BoxShape.circle, gradient: LinearGradient(colors: [Color(0xff027DFD), Color(0xff1cdac5), Color(0xffF2DD22)])), 
-          padding: const EdgeInsets.all(35),
-          margin: const EdgeInsets.all(20),
-          child: const Text('Select Your\n Park', textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Road_Rage'),),
+          padding: const EdgeInsets.all(20),
+          margin: const EdgeInsets.all(15),
+          child: const Text('View Top\n Trails', textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Road_Rage', fontSize: 16, fontWeight: FontWeight.bold)),
         ),
         Card(
           child: ListTile(
@@ -33,7 +30,7 @@ class ListTileParkState extends State<ListTilePark> {
             trailing: const Icon(Icons.arrow_forward_ios_outlined),
             onTap: () { 
               // Navigator.pushNamed(context, SecondScreen.routeName); 
-              DefaultTabController.of(context)!.animateTo(1);
+              DefaultTabController.of(context).animateTo(1);
             },
             isThreeLine: true,
           ),
@@ -45,7 +42,7 @@ class ListTileParkState extends State<ListTilePark> {
             subtitle:
               const Text('Sierra Nevada, giant sequoias, towering falls and the granite cliffs of Half Dome'),
             trailing: const Icon(Icons.arrow_forward_ios_outlined),
-            onTap: () { DefaultTabController.of(context)!.animateTo(1); },
+            onTap: () { DefaultTabController.of(context).animateTo(1); },
             isThreeLine: true,
           ),
         ),
@@ -58,7 +55,7 @@ class ListTileParkState extends State<ListTilePark> {
             trailing: const Icon(Icons.arrow_forward_ios_outlined),
             onTap: () { 
               // Navigator.pushNamed(context, SecondScreen.routeName); 
-              DefaultTabController.of(context)!.animateTo(1);
+              DefaultTabController.of(context).animateTo(1);
               },
             isThreeLine: true,
           ),
