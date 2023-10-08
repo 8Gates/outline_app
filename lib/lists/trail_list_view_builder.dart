@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TrailList extends StatelessWidget {
   final Future<List<Map<String, dynamic>>> trailsFuture;
 
-  TrailList({super.key, required this.trailsFuture});
+  const TrailList({super.key, required this.trailsFuture});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class TrailList extends StatelessWidget {
         } else {
           final List<Map<String, dynamic>> trails = snapshot.data ?? [];
           return ListView.builder(
-            shrinkWrap: true, // Set shrinkWrap to true
+            // shrinkWrap: true, // Set shrinkWrap to true
             itemCount: trails.length,
             itemBuilder: (BuildContext context, int index) {
               final int id = trails[index]['id'];
@@ -29,7 +29,7 @@ class TrailList extends StatelessWidget {
               final String difficulty = trails[index]['difficulty'];
 
               // Exclude longitude, latitude, and description fields
-              return ListTile(
+              return Card(child: ListTile(
                 title: Text('Trail Name: $name'),
                 subtitle: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,7 +41,7 @@ class TrailList extends StatelessWidget {
                   ],
                 ),
                 // Add more ListTile properties as needed
-              );
+              ));
             },
           );
         }

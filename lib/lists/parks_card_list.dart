@@ -19,7 +19,7 @@ class ParksCardListState extends State<ParksCardList> {
           decoration: const BoxDecoration(shape: BoxShape.circle, gradient: LinearGradient(colors: [Color(0xff027DFD), Color(0xff1cdac5), Color(0xffF2DD22)])), 
           padding: const EdgeInsets.all(20),
           margin: const EdgeInsets.all(15),
-          child: const Text('View Top\n Trails', textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Road_Rage', fontSize: 16, fontWeight: FontWeight.bold)),
+          child: const Text('Find Next \n Trail', textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Road_Rage', fontSize: 16, fontWeight: FontWeight.bold)),
         ),
         Card(
           child: ListTile(

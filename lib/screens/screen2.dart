@@ -1,12 +1,9 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:outline_app/buttons/animate_to_screen.dart';
 import 'package:outline_app/buttons/insert_database_button.dart';
 import 'package:outline_app/buttons/read_database_button.dart';
 import 'package:outline_app/lists/trail_list_view_builder.dart';
 import 'package:outline_app/models/read_db.dart';
-import 'dart:async';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -63,34 +60,25 @@ class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: TrailList(trailsFuture: ReadDatabase().getTrailsData()),
-      floatingActionButton: const Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[ReadDatabaseButton(), InsertDatabaseButton(), AnimateToScreen(screen: 0)],
-      )),
-      /*
-      bottomNavigationBar: const Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                children: [
-                  AnimateToScreen(screen: 0),
-                  ReadDatabaseButton(),
-                  InsertDatabaseButton(),
-                ],
-              ),
-              SizedBox(height: 16), // Add some vertical spacing
-            ],
-          ),
+      body: 
+        FractionallySizedBox(
+          heightFactor: 0.8, 
+          child: TrailList(trailsFuture: ReadDatabase().getTrailsData())
         ),
-        */
+        floatingActionButton: const FractionallySizedBox(
+          widthFactor: 0.92, 
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              ReadDatabaseButton(), 
+              InsertDatabaseButton(), 
+              AnimateToScreen(screen: 0)
+            ],
+          )
+        ),
       backgroundColor: widget.darkMode
-          ? const Color.fromARGB(255, 61, 61, 61)
-          : const Color.fromARGB(244, 240, 240, 240),
+        ? const Color.fromARGB(255, 61, 61, 61)
+        : const Color.fromARGB(244, 240, 240, 240),
     );
   }
 }

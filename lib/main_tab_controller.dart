@@ -20,7 +20,7 @@ class MainTabController extends StatefulWidget {
 }
 
 class _MainTabControllerState extends State<MainTabController> {
-  final String title = 'National Parks';
+  final String title = 'NT National Parks';
   static bool darkMode = false;
 
   @override
