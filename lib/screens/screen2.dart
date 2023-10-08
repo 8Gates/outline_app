@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:outline_app/buttons/animate_to_screen.dart';
+import 'package:outline_app/buttons/delete_database_button.dart';
 import 'package:outline_app/buttons/insert_database_button.dart';
 import 'package:outline_app/buttons/read_database_button.dart';
 import 'package:outline_app/lists/trail_list_view_builder.dart';
@@ -71,7 +72,8 @@ class _SecondScreenState extends State<SecondScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               ReadDatabaseButton(), 
-              InsertDatabaseButton(), 
+              InsertDatabaseButton(),
+              DeleteDatabaseButton(), 
               AnimateToScreen(screen: 0)
             ],
           )
