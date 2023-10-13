@@ -22,7 +22,7 @@ class TrailList extends StatelessWidget {
             // shrinkWrap: true, // Set shrinkWrap to true
             itemCount: trails.length,
             itemBuilder: (BuildContext context, int index) {
-              final int id = trails[index]['id'];
+              final String park = trails[index]['park'];
               final String name = trails[index]['name'];
               final double distance = trails[index]['distance'];
               final double elevationGain = trails[index]['elevation_gain'];
@@ -34,7 +34,7 @@ class TrailList extends StatelessWidget {
                 subtitle: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('ID: $id'),
+                    Text('Park: $park'),
                     Text('Distance: $distance'),
                     Text('Elevation Gain: $elevationGain'),
                     Text('Difficulty: $difficulty'),

@@ -11,7 +11,6 @@ class ReadDatabaseButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: () async {
-        // Open the database
         final Database database = await openDatabase(
           join(await getDatabasesPath(), 'trails_database.db'),
         );
@@ -19,9 +18,9 @@ class ReadDatabaseButton extends StatelessWidget {
         // Read values from the database
         final List<Map<String, dynamic>> trails = await database.query('trails');
 
-        // Process and print the values
         for (final trail in trails) {
           final int id = trail['id'];
+          final String park = trail['park'];
           final String name = trail['name'];
           final String description = trail['description'];
           final double distance = trail['distance'];
@@ -30,8 +29,8 @@ class ReadDatabaseButton extends StatelessWidget {
           final double latitude = trail['latitude'];
           final double longitude = trail['longitude'];
 
-          // Print values to the console
           log('Trail #$id');
+          log('Park: $park');
           log('Name: $name');
           log('Description: $description');
           log('Distance: $distance');
@@ -40,8 +39,6 @@ class ReadDatabaseButton extends StatelessWidget {
           log('Latitude: $latitude');
           log('Longitude: $longitude');
         }
-
-        // Close the database
         await database.close();
       },
       child: const Text('Log'),

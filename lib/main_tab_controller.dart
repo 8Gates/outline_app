@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'main_drawer.dart';
 import 'lists/parks_card_list.dart';
 
+
 class MainTabController extends StatefulWidget {
   static const tabs = [
     Tab(icon: Icon(Icons.home)),
@@ -22,23 +23,23 @@ class MainTabController extends StatefulWidget {
 class _MainTabControllerState extends State<MainTabController> {
   final String title = 'NT National Parks';
   static bool darkMode = false;
+  static String park = 'Yellow Stone';
 
   @override
   void initState(){
     super.initState();
-    initDarkMode();
+    initSharedPreferences();
   }
 
-  bool getDarkMode(){
-    return darkMode;
-  }
-
-  void initDarkMode() async{
+  void initSharedPreferences() async{
     late bool initDark;
+    late String initPark;
     final SharedPreferences preferences = await SharedPreferences.getInstance();
     preferences.getBool('darkMode') == null ? preferences.setBool('darkMode', false) : initDark = preferences.getBool('darkMode')!;
+    preferences.getString('park') == null ? preferences.setString('park', 'Yellow Stone') : initPark = preferences.getString('park')!;
     setState(() { 
       darkMode = initDark;
+      park = initPark;
     });
   }
 
@@ -50,9 +51,18 @@ class _MainTabControllerState extends State<MainTabController> {
     preferences.setBool('darkMode', darkMode);
   }
 
+  Future<void> setPark(String parkName) async {
+    // park will be set when the user clicks a Card within ParksCardList and passed
+    // to screen2 for database query 
+    setState(() {
+      park = parkName;
+    });
+    final SharedPreferences preferences = await SharedPreferences.getInstance();
+    preferences.setString('park', park);
+  }
+
   @override
   Widget build(BuildContext context) {
-    
     return DefaultTabController(
       length: 4,
       initialIndex: 0,
@@ -66,10 +76,16 @@ class _MainTabControllerState extends State<MainTabController> {
           drawer: MainDrawer(darkMode, flipDarkMode: flipDarkMode),
           body: 
             TabBarView(children: [
-              const Align(alignment: Alignment.center, child: ParksCardList()),
-              SecondScreen(darkMode),
+              Align(
+                alignment: Alignment.center, 
+                child: ParksCardList(setPark: setPark)
+              ),
+              SecondScreen(darkMode, park),
               ThirdScreen(darkMode),
-              const Align(alignment: Alignment.center, child: Text('temp screen 4')),
+              const Align(
+                alignment: Alignment.center, 
+                child: Text('temp screen 4')
+              ),
             ]), 
             backgroundColor: darkMode? dark() : const Color.fromARGB(244, 240, 240, 240)
       )

@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 enum NationalPark { yellowStone, yosemite, rainier }
 
 class ParksCardList extends StatefulWidget {
-  const ParksCardList({super.key});
+  final void Function(String park) setPark;
 
+  const ParksCardList({super.key, required this.setPark});
   @override
   State<ParksCardList> createState() => ParksCardListState();
 }
@@ -29,7 +30,7 @@ class ParksCardListState extends State<ParksCardList> {
               const Text('A nearly 3,500-sq.-mile wilderness recreation area atop a volcanic hot spot.'),
             trailing: const Icon(Icons.arrow_forward_ios_outlined),
             onTap: () { 
-              // Navigator.pushNamed(context, SecondScreen.routeName); 
+              widget.setPark("Yellow Stone");
               DefaultTabController.of(context).animateTo(1);
             },
             isThreeLine: true,
@@ -42,7 +43,10 @@ class ParksCardListState extends State<ParksCardList> {
             subtitle:
               const Text('Sierra Nevada, giant sequoias, towering falls and the granite cliffs of Half Dome'),
             trailing: const Icon(Icons.arrow_forward_ios_outlined),
-            onTap: () { DefaultTabController.of(context).animateTo(1); },
+            onTap: () {
+              widget.setPark("Yosemite"); 
+              DefaultTabController.of(context).animateTo(1); 
+            },
             isThreeLine: true,
           ),
         ),
@@ -54,9 +58,9 @@ class ParksCardListState extends State<ParksCardList> {
               const Text('Alpine glaciers and the highest volcanic peak in the contiguous United States.'),
             trailing: const Icon(Icons.arrow_forward_ios_outlined),
             onTap: () { 
-              // Navigator.pushNamed(context, SecondScreen.routeName); 
+              widget.setPark("Rainier"); 
               DefaultTabController.of(context).animateTo(1);
-              },
+            },
             isThreeLine: true,
           ),
         )

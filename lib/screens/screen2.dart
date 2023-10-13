@@ -3,16 +3,21 @@ import 'package:outline_app/buttons/animate_to_screen.dart';
 import 'package:outline_app/buttons/delete_database_button.dart';
 import 'package:outline_app/buttons/insert_database_button.dart';
 import 'package:outline_app/buttons/read_database_button.dart';
+import 'package:outline_app/lists/parks_card_list.dart';
 import 'package:outline_app/lists/trail_list_view_builder.dart';
 import 'package:outline_app/models/read_db.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle; // Import rootBundle
+
 
 
 class SecondScreen extends StatefulWidget {
   final bool darkMode;
+  final String park;
 
-  const SecondScreen(this.darkMode, {super.key});
+  const SecondScreen(this.darkMode, this.park, {super.key});
   static const routeName = 'screen2';
 
   @override
@@ -35,6 +40,7 @@ class _SecondScreenState extends State<SecondScreen> {
         db.execute('''
           CREATE TABLE trails (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
+            park TEXT NOT NULL,
             name TEXT NOT NULL,
             description TEXT NOT NULL,
             distance REAL NOT NULL,
@@ -44,16 +50,17 @@ class _SecondScreenState extends State<SecondScreen> {
             longitude REAL NOT NULL
           )
         ''');
-        // Insert one row of sample data when the table is created
-        await db.insert('trails', {
-          'name': 'Sample Trail',
-          'description': 'This is a sample trail.',
-          'distance': 5.0,
-          'elevation_gain': 1700,
-          'difficulty': 'Moderate',
-          'latitude': 123.456,
-          'longitude': 789.012,
-        });
+        
+          // Read the JSON file containing the trail data
+          final jsonString = await rootBundle.loadString('assets/init_database.json');
+
+          // Parse the JSON data
+          final List<dynamic> data = json.decode(jsonString);
+
+          // Insert the data into the database
+          for (final trail in data) {
+            await db.insert('trails', trail);
+          }
       })
     );
   }
@@ -64,7 +71,7 @@ class _SecondScreenState extends State<SecondScreen> {
       body: 
         FractionallySizedBox(
           heightFactor: 0.8, 
-          child: TrailList(trailsFuture: ReadDatabase().getTrailsData())
+          child: TrailList(trailsFuture: ReadDatabase().getTrailsData(widget.park))
         ),
         floatingActionButton: const FractionallySizedBox(
           widthFactor: 0.92, 

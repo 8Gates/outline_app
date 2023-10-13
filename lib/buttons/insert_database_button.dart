@@ -19,6 +19,7 @@ class InsertDatabaseButton extends StatelessWidget {
 
         // Insert one row of sample data
         await database.insert('trails', {
+          'park': 'Yellow Stone',
           'name': 'Sample Trail',
           'description': 'This is a sample trail.',
           'distance': Random().nextInt(10),

@@ -16,8 +16,12 @@ class ReadDatabase {
   }
 
   // Query the 'trails' table and return the data as a List<Map<String, dynamic>>
-  Future<List<Map<String, dynamic>>> getTrailsData() async {
+  Future<List<Map<String, dynamic>>> getTrailsData(String park) async {
     final db = await database;
-    return await db.query('trails');
+    return await db.query(
+      'trails',
+      where: 'park = ?',
+      whereArgs: [park],
+    );
   }
 }

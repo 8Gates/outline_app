@@ -63,6 +63,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/init_database.json
 
   fonts:
     - family: Road_Rage
