@@ -1,0 +1,103 @@
+[
+    {
+      "park": "Yellow Stone",
+      "name": "Grand Prismatic Hot Spring",
+      "description": "Head out on this 1.5-mile out-and-back trail near West Yellowstone, Montana. Generally considered an easy route, it takes an average of 38 min to complete.",
+      "distance": 1.5,
+      "elevation_gain": 200,
+      "difficulty": "Easy",
+      "latitude": 123.456,
+      "longitude": 789.012
+    },
+    {
+      "park": "Yellow Stone",
+      "name": "Upper Geyser Basin",
+      "description": "Enjoy this 4.9-mile loop trail near West Yellowstone, Montana. Generally considered a moderately challenging route, it takes an average of 1 h 46 min to complete.",
+      "distance": 4.9,
+      "elevation_gain": 357,
+      "difficulty": "Easy",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Yellow Stone",
+      "name": "Mystic Falls",
+      "description": "Check out this 3.5-mile loop trail near West Yellowstone, Montana. Generally considered a moderately challenging route, it takes an average of 1 h 38 min to complete.",
+      "distance": 3.5,
+      "elevation_gain": 606,
+      "difficulty": "Moderate",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Yellow Stone",
+      "name": "Fairy Falls",
+      "description": "Get to know this 4.8-mile out-and-back trail near West Yellowstone, Montana. Generally considered an easy route, it takes an average of 1 h 35 min to complete.",
+      "distance": 4.8,
+      "elevation_gain": 170,
+      "difficulty": "Easy",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+        "park": "Yosemite",
+        "name": "Nevada Falls via Mist",
+        "description": "Try this 6.4-mile loop trail near Yosemite Valley, California. Generally considered a challenging route, it takes an average of 4 h 10 min to complete.",
+        "distance": 6.4,
+        "elevation_gain": 2208,
+        "difficulty": "Hard",
+        "latitude": 123.456,
+        "longitude": 789.012
+      },
+      {
+        "park": "Half Dome via John Muir",
+        "name": "Upper Geyser Basin",
+        "description": "Proceed cautiously on this 16.5-mile out-and-back trail near Yosemite Valley, California. Generally considered a highly challenging route, it should only be attempted by experienced adventurers.",
+        "distance": 16.5,
+        "elevation_gain": 5305,
+        "difficulty": "Hard",
+        "latitude": 124.567,
+        "longitude": 789.789
+      },
+      {
+        "park": "Yosemite",
+        "name": "Upper Yosemite Falls",
+        "description": "Check out this 6.6-mile out-and-back trail near Yosemite Valley, California. Generally considered a challenging route, it takes an average of 5 h 21 min to complete.",
+        "distance": 6.6,
+        "elevation_gain": 3254,
+        "difficulty": "Hard",
+        "latitude": 124.567,
+        "longitude": 789.789
+      },
+      {
+        "park": "Rainier",
+        "name": "Skyline Trail Loop",
+        "description": "Explore this 5.7-mile loop trail near Paradise, Washington. Generally considered a challenging route, it takes an average of 3 h 30 min to complete.",
+        "distance": 5.7,
+        "elevation_gain": 1768,
+        "difficulty": "Hard",
+        "latitude": 123.456,
+        "longitude": 789.012
+      },
+      {
+        "park": "Rainier",
+        "name": "Mount Fremont Lookout",
+        "description": "Explore this 5.7-mile out-and-back trail near Sunrise Inn, Washington. Generally considered a moderately challenging route, it takes an average of 2 h 48 min to complete.",
+        "distance": 5.7,
+        "elevation_gain": 1108,
+        "difficulty": "Moderate",
+        "latitude": 124.567,
+        "longitude": 789.789
+      },
+      {
+        "park": "Rainier",
+        "name": "Silver Falls Loop",
+        "description": "Get to know this 2.9-mile loop trail near Paradise, Washington. Generally considered an easy route, it takes an average of 1 h 22 min to complete.",
+        "distance": 2.9,
+        "elevation_gain": 521,
+        "difficulty": "Easy",
+        "latitude": 124.567,
+        "longitude": 789.789
+      }
+  ]
+  
