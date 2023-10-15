@@ -208,6 +208,76 @@
       "difficulty": "Hard",
       "latitude": 124.567,
       "longitude": 789.789
+    },
+    {
+      "park": "Mock",
+      "name": "Dignissimos Ducimus",
+      "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.",
+      "distance": 6.4,
+      "elevation_gain": 1208,
+      "difficulty": "Hard",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Mock",
+      "name": "Lorem Ipsum",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "distance": 6.4,
+      "elevation_gain": 1208,
+      "difficulty": "Moderate",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Mock",
+      "name": "Dignissimos Ducimus",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit.",
+      "distance": 3.4,
+      "elevation_gain": 725,
+      "difficulty": "Moderate",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Mock",
+      "name": "Sit Amet",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi.",
+      "distance": 1.7,
+      "elevation_gain": 312,
+      "difficulty": "Easy",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Mock",
+      "name": "Sit Amet",
+      "description": "Nulla posuere sollicitudin aliquam ultrices sagittis orci. Sem viverra aliquet eget sit. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam erat.",
+      "distance": 28.2,
+      "elevation_gain": 6337,
+      "difficulty": "Hard",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Mock",
+      "name": "Diam Donec",
+      "description": "Ut venenatis tellus in metus vulputate. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Leo integer malesuada nunc vel. Diam sit amet nisl suscipit adipiscing bibendum.",
+      "distance": 2,
+      "elevation_gain": 108,
+      "difficulty": "Easy",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Mock",
+      "name": "Non Blandit",
+      "description": "Massa enim nec dui nunc mattis enim. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Ipsum dolor sit amet consectetur adipiscing.",
+      "distance": 3.5,
+      "elevation_gain": 985,
+      "difficulty": "Easy",
+      "latitude": 124.567,
+      "longitude": 789.789
     }
   ]
   

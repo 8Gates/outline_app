@@ -32,14 +32,18 @@ class _MainTabControllerState extends State<MainTabController> {
   }
 
   void initSharedPreferences() async{
-    late bool initDark;
-    late String initPark;
+    // late bool initDark = false;
+    // late String initPark;
     final SharedPreferences preferences = await SharedPreferences.getInstance();
-    preferences.getBool('darkMode') == null ? preferences.setBool('darkMode', false) : initDark = preferences.getBool('darkMode')!;
-    preferences.getString('park') == null ? preferences.setString('park', 'Yellow Stone') : initPark = preferences.getString('park')!;
-    setState(() { 
-      darkMode = initDark;
-      park = initPark;
+    // preferences.getBool('darkMode') == null ? preferences.setBool('darkMode', false) : initDark = preferences.getBool('darkMode')!;
+    // preferences.getString('park') == null ? preferences.setString('park', 'Yellow Stone') : initPark = preferences.getString('park')!;
+    setState(() {
+      darkMode = preferences.getBool('darkMode') == null ? false : preferences.getBool('darkMode')!;
+      preferences.setBool('darkMode', darkMode);
+      //darkMode = initDark;
+      park = preferences.getString('park') == null ? 'Yellow Stone' : preferences.getString('park')!;
+      preferences.setString('park', park);
+      //park = initPark;
     });
   }
 

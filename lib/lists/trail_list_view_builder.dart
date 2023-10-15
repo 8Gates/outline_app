@@ -49,23 +49,23 @@ class ExpandingCard extends StatefulWidget {
   const ExpandingCard(this.name, this.park, this.distance, this.elevation, this.difficulty, this.description, {super.key});
 
   compressedContent(){
-  return [ 
-    Text('Park: $park'),
-    Text('Distance: $distance miles'),
-    Text('Elevation Gain: $elevation ft'),
-    Text('Difficulty: $difficulty')
-  ];
-}
+    return [ 
+      Text('Park: $park'),
+      Text('Distance: $distance miles'),
+      Text('Elevation Gain: $elevation ft'),
+      Text('Difficulty: $difficulty')
+    ];
+  } 
 
-expandedContent(){
-  return [
-    Text('Park: $park'),
-    Text('Distance: $distance miles'),
-    Text('Elevation Gain: $elevation ft'),
-    Text('Difficulty: $difficulty'),
-    Text('Description: $description')
-  ];
-}
+  expandedContent(){
+    return [
+      Text('Park: $park'),
+      Text('Distance: $distance miles'),
+      Text('Elevation Gain: $elevation ft'),
+      Text('Difficulty: $difficulty'),
+      Text('Description: $description')
+    ];
+  }
 
   @override
   State<ExpandingCard> createState() => _ExpandingCardState();
@@ -82,9 +82,10 @@ class _ExpandingCardState extends State<ExpandingCard> {
 
   @override
   Widget build(BuildContext context) {
+    String name = widget.name;
     return Card(child: 
       ListTile(
-        title: Text('Trail Name: $widget.name'),
+        title: Text('$name Trail'),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: isExpanded ? widget.expandedContent() : widget.compressedContent()

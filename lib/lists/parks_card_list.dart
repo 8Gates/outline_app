@@ -79,7 +79,7 @@ class ParksCardListState extends State<ParksCardList> {
               subtitle: const Text('Alpine glaciers and the highest volcanic peak in the contiguous United States.'),
               trailing: const Icon(Icons.arrow_forward_ios_outlined),
               onTap: () { 
-                widget.setPark("Rainier"); 
+                widget.setPark("Mock"); 
                 DefaultTabController.of(context).animateTo(1);
               },
               isThreeLine: true,
@@ -92,7 +92,7 @@ class ParksCardListState extends State<ParksCardList> {
               subtitle: const Text('Alpine glaciers and the highest volcanic peak in the contiguous United States.'),
               trailing: const Icon(Icons.arrow_forward_ios_outlined),
               onTap: () { 
-                widget.setPark("Rainier"); 
+                widget.setPark("Mock"); 
                 DefaultTabController.of(context).animateTo(1);
               },
               isThreeLine: true,
@@ -105,7 +105,7 @@ class ParksCardListState extends State<ParksCardList> {
               subtitle: const Text('Alpine glaciers and the highest volcanic peak in the contiguous United States.'),
               trailing: const Icon(Icons.arrow_forward_ios_outlined),
               onTap: () { 
-                widget.setPark("Rainier"); 
+                widget.setPark("Mock"); 
                 DefaultTabController.of(context).animateTo(1);
               },
               isThreeLine: true,
@@ -118,7 +118,7 @@ class ParksCardListState extends State<ParksCardList> {
               subtitle: const Text('Alpine glaciers and the highest volcanic peak in the contiguous United States.'),
               trailing: const Icon(Icons.arrow_forward_ios_outlined),
               onTap: () { 
-                widget.setPark("Rainier"); 
+                widget.setPark("Mock"); 
                 DefaultTabController.of(context).animateTo(1);
               },
               isThreeLine: true,
@@ -131,7 +131,7 @@ class ParksCardListState extends State<ParksCardList> {
               subtitle: const Text('Alpine glaciers and the highest volcanic peak in the contiguous United States.'),
               trailing: const Icon(Icons.arrow_forward_ios_outlined),
               onTap: () { 
-                widget.setPark("Rainier"); 
+                widget.setPark("Mock"); 
                 DefaultTabController.of(context).animateTo(1);
               },
               isThreeLine: true,
