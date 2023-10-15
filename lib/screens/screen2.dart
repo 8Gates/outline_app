@@ -44,7 +44,7 @@ class _SecondScreenState extends State<SecondScreen> {
             name TEXT NOT NULL,
             description TEXT NOT NULL,
             distance REAL NOT NULL,
-            elevation_gain REAL NOT NULL,
+            elevation_gain NUM NOT NULL,
             difficulty TEXT NOT NULL,
             latitude REAL NOT NULL,
             longitude REAL NOT NULL

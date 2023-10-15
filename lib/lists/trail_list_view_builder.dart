@@ -25,7 +25,7 @@ class TrailList extends StatelessWidget {
               final String park = trails[index]['park'];
               final String name = trails[index]['name'];
               final double distance = trails[index]['distance'];
-              final double elevationGain = trails[index]['elevation_gain'];
+              final int elevationGain = trails[index]['elevation_gain'];
               final String difficulty = trails[index]['difficulty'];
 
               // Exclude longitude, latitude, and description fields
@@ -35,8 +35,8 @@ class TrailList extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('Park: $park'),
-                    Text('Distance: $distance'),
-                    Text('Elevation Gain: $elevationGain'),
+                    Text('Distance: $distance miles'),
+                    Text('Elevation Gain: $elevationGain ft'),
                     Text('Difficulty: $difficulty'),
                   ],
                 ),

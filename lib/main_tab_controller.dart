@@ -21,7 +21,7 @@ class MainTabController extends StatefulWidget {
 }
 
 class _MainTabControllerState extends State<MainTabController> {
-  final String title = 'NT National Parks';
+  final String title = 'Top Seven Trails';
   static bool darkMode = false;
   static String park = 'Yellow Stone';
 
@@ -78,7 +78,7 @@ class _MainTabControllerState extends State<MainTabController> {
             TabBarView(children: [
               Align(
                 alignment: Alignment.center, 
-                child: ParksCardList(setPark: setPark)
+                child: ParksCardList(darkMode, setPark: setPark)
               ),
               SecondScreen(darkMode, park),
               ThirdScreen(darkMode),
