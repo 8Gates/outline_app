@@ -48,7 +48,7 @@ class ParksCardListState extends State<ParksCardList> {
           ),
           Card(
             child: ListTile(
-              leading: Image.asset('assets/images/yosemite2.jpg'),
+              leading: Image.asset('assets/images/yosemite.jpg'),
               title: const Text('Yosemite'),
               subtitle: const Text('Sierra Nevada, giant sequoias, towering falls and the granite cliffs of Half Dome'),
               trailing: const Icon(Icons.arrow_forward_ios_outlined),
