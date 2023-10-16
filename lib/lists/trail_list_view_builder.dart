@@ -25,27 +25,77 @@ class TrailList extends StatelessWidget {
               final String park = trails[index]['park'];
               final String name = trails[index]['name'];
               final double distance = trails[index]['distance'];
-              final double elevationGain = trails[index]['elevation_gain'];
+              final int elevationGain = trails[index]['elevation_gain'];
               final String difficulty = trails[index]['difficulty'];
+              final String description = trails[index]['description'];
 
               // Exclude longitude, latitude, and description fields
-              return Card(child: ListTile(
-                title: Text('Trail Name: $name'),
-                subtitle: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Park: $park'),
-                    Text('Distance: $distance'),
-                    Text('Elevation Gain: $elevationGain'),
-                    Text('Difficulty: $difficulty'),
-                  ],
-                ),
-                // Add more ListTile properties as needed
-              ));
+              return ExpandingCard(name, park, distance, elevationGain, difficulty, description);
             },
           );
         }
       },
+    );
+  }
+}
+
+class ExpandingCard extends StatefulWidget {
+  final String name;
+  final String park;
+  final double distance;
+  final int elevation;
+  final String difficulty;
+  final String description;
+  const ExpandingCard(this.name, this.park, this.distance, this.elevation, this.difficulty, this.description, {super.key});
+
+  compressedContent(){
+    return [ 
+      Text('Park: $park'),
+      Text('Distance: $distance miles'),
+      Text('Elevation Gain: $elevation ft'),
+      Text('Difficulty: $difficulty')
+    ];
+  } 
+
+  expandedContent(){
+    return [
+      Text('Park: $park'),
+      Text('Distance: $distance miles'),
+      Text('Elevation Gain: $elevation ft'),
+      Text('Difficulty: $difficulty'),
+      Text('Description: $description')
+    ];
+  }
+
+  @override
+  State<ExpandingCard> createState() => _ExpandingCardState();
+}
+
+class _ExpandingCardState extends State<ExpandingCard> {
+  bool isExpanded = false;
+
+  void toggleExpanded() {
+    setState(() {
+      isExpanded = !isExpanded;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    String name = widget.name;
+    return Card(child: 
+      ListTile(
+        title: Text('$name Trail'),
+        subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: isExpanded ? widget.expandedContent() : widget.compressedContent()
+        ),
+        trailing: IconButton(
+          icon: Icon(isExpanded ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down),
+          onPressed: toggleExpanded,
+        ),
+        onTap: toggleExpanded,
+      )
     );
   }
 }

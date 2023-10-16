@@ -40,64 +40,244 @@
       "longitude": 789.789
     },
     {
-        "park": "Yosemite",
-        "name": "Nevada Falls via Mist",
-        "description": "Try this 6.4-mile loop trail near Yosemite Valley, California. Generally considered a challenging route, it takes an average of 4 h 10 min to complete.",
-        "distance": 6.4,
-        "elevation_gain": 2208,
-        "difficulty": "Hard",
-        "latitude": 123.456,
-        "longitude": 789.012
-      },
-      {
-        "park": "Half Dome via John Muir",
-        "name": "Upper Geyser Basin",
-        "description": "Proceed cautiously on this 16.5-mile out-and-back trail near Yosemite Valley, California. Generally considered a highly challenging route, it should only be attempted by experienced adventurers.",
-        "distance": 16.5,
-        "elevation_gain": 5305,
-        "difficulty": "Hard",
-        "latitude": 124.567,
-        "longitude": 789.789
-      },
-      {
-        "park": "Yosemite",
-        "name": "Upper Yosemite Falls",
-        "description": "Check out this 6.6-mile out-and-back trail near Yosemite Valley, California. Generally considered a challenging route, it takes an average of 5 h 21 min to complete.",
-        "distance": 6.6,
-        "elevation_gain": 3254,
-        "difficulty": "Hard",
-        "latitude": 124.567,
-        "longitude": 789.789
-      },
-      {
-        "park": "Rainier",
-        "name": "Skyline Trail Loop",
-        "description": "Explore this 5.7-mile loop trail near Paradise, Washington. Generally considered a challenging route, it takes an average of 3 h 30 min to complete.",
-        "distance": 5.7,
-        "elevation_gain": 1768,
-        "difficulty": "Hard",
-        "latitude": 123.456,
-        "longitude": 789.012
-      },
-      {
-        "park": "Rainier",
-        "name": "Mount Fremont Lookout",
-        "description": "Explore this 5.7-mile out-and-back trail near Sunrise Inn, Washington. Generally considered a moderately challenging route, it takes an average of 2 h 48 min to complete.",
-        "distance": 5.7,
-        "elevation_gain": 1108,
-        "difficulty": "Moderate",
-        "latitude": 124.567,
-        "longitude": 789.789
-      },
-      {
-        "park": "Rainier",
-        "name": "Silver Falls Loop",
-        "description": "Get to know this 2.9-mile loop trail near Paradise, Washington. Generally considered an easy route, it takes an average of 1 h 22 min to complete.",
-        "distance": 2.9,
-        "elevation_gain": 521,
-        "difficulty": "Easy",
-        "latitude": 124.567,
-        "longitude": 789.789
-      }
+      "park": "Yellow Stone",
+      "name": "Upper Lower Crystal Falls",
+      "description": "Check out this 4.1-mile out-and-back trail near West Yellowstone, Montana. Generally considered a moderately challenging route, it takes an average of 1 h 39 min to complete.",
+      "distance": 4.1,
+      "elevation_gain": 459,
+      "difficulty": "Moderate",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Yellow Stone",
+      "name": "Brink of the Lower Falls",
+      "description": "Head out on this 0.7-mile out-and-back trail near West Yellowstone, Montana. Generally considered a moderately challenging route, it takes an average of 30 min to complete.",
+      "distance": 0.7,
+      "elevation_gain": 265,
+      "difficulty": "Moderate",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Yellow Stone",
+      "name": "Canyon Rim South Trail to Artist Point",
+      "description": "Head out on this 2.5-mile out-and-back trail near West Yellowstone, Montana. Generally considered an easy route, it takes an average of 1 h 0 min to complete.",
+      "distance": 2.5,
+      "elevation_gain": 278,
+      "difficulty": "Easy",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Yosemite",
+      "name": "Nevada Falls via Mist",
+      "description": "Try this 6.4-mile loop trail near Yosemite Valley, California. Generally considered a challenging route, it takes an average of 4 h 10 min to complete.",
+      "distance": 6.4,
+      "elevation_gain": 2208,
+      "difficulty": "Hard",
+      "latitude": 123.456,
+      "longitude": 789.012
+    },
+    {
+      "park": "Yosemite",
+      "name": "Half Dome via John Muir",
+      "description": "Proceed cautiously on this 16.5-mile out-and-back trail near Yosemite Valley, California. Generally considered a highly challenging route, it should only be attempted by experienced adventurers.",
+      "distance": 16.5,
+      "elevation_gain": 5305,
+      "difficulty": "Hard",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Yosemite",
+      "name": "Upper Yosemite Falls",
+      "description": "Check out this 6.6-mile out-and-back trail near Yosemite Valley, California. Generally considered a challenging route, it takes an average of 5 h 21 min to complete.",
+      "distance": 6.6,
+      "elevation_gain": 3254,
+      "difficulty": "Hard",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Yosemite",
+      "name": "Vernal Falls",
+      "description": "Head out on this 3.1-mile out-and-back trail near Yosemite Valley, California. Generally considered a challenging route, it takes an average of 2 h 5 min to complete.",
+      "distance": 3.1,
+      "elevation_gain": 1131,
+      "difficulty": "Hard",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Yosemite",
+      "name": "Lower Yosemite Falls",
+      "description": "Experience this 1.2-mile loop trail near Yosemite Valley, California. Generally considered an easy route, it takes an average of 24 min to complete.",
+      "distance": 1.2,
+      "elevation_gain": 55,
+      "difficulty": "Easy",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Yosemite",
+      "name": "Four Mile",
+      "description": "Try this 9.7-mile out-and-back trail near Yosemite Valley, California. Generally considered a challenging route, it takes an average of 6 h 23 min to complete.",
+      "distance": 9.7,
+      "elevation_gain": 3418,
+      "difficulty": "Hard",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Yosemite",
+      "name": "Columbia Rock",
+      "description": "Enjoy this 2.2-mile out-and-back trail near Yosemite Valley, California. Generally considered a moderately challenging route, it takes an average of 1 h 42 min to complete.",
+      "distance": 2.2,
+      "elevation_gain": 1013,
+      "difficulty": "Moderate",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Rainier",
+      "name": "Skyline Trail Loop",
+      "description": "Explore this 5.7-mile loop trail near Paradise, Washington. Generally considered a challenging route, it takes an average of 3 h 30 min to complete.",
+      "distance": 5.7,
+      "elevation_gain": 1768,
+      "difficulty": "Hard",
+      "latitude": 123.456,
+      "longitude": 789.012
+    },
+    {
+      "park": "Rainier",
+      "name": "Mount Fremont Lookout",
+      "description": "Explore this 5.7-mile out-and-back trail near Sunrise Inn, Washington. Generally considered a moderately challenging route, it takes an average of 2 h 48 min to complete.",
+      "distance": 5.7,
+      "elevation_gain": 1108,
+      "difficulty": "Moderate",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Rainier",
+      "name": "Silver Falls Loop",
+      "description": "Get to know this 2.9-mile loop trail near Paradise, Washington. Generally considered an easy route, it takes an average of 1 h 22 min to complete.",
+      "distance": 2.9,
+      "elevation_gain": 521,
+      "difficulty": "Easy",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Rainier",
+      "name": "Tolmie Peak",
+      "description": "Discover this 5.6-mile out-and-back trail near Carbonado, Washington. Generally considered a moderately challenging route, it takes an average of 3 h 16 min to complete.",
+      "distance": 5.6,
+      "elevation_gain": 1555,
+      "difficulty": "Moderate",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Rainier",
+      "name": "Panorama Point via Skyline",
+      "description": "Check out this 3.8-mile out-and-back trail near Paradise, Washington. Generally considered a challenging route, it takes an average of 2 h 29 min to complete.",
+      "distance": 3.8,
+      "elevation_gain": 1322,
+      "difficulty": "Hard",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Rainier",
+      "name": "Naches Peak",
+      "description": "Experience this 3.5-mile loop trail near Goose Prairie, Washington. Generally considered a moderately challenging route, it takes an average of 1 h 42 min to complete.",
+      "distance": 3.5,
+      "elevation_gain": 659,
+      "difficulty": "Moderate",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Rainier",
+      "name": "Burroughs Mountain Loop",
+      "description": "Get to know this 9.5-mile loop trail near Greenwater , Washington. Generally considered a challenging route, it takes an average of 5 h 28 min to complete.",
+      "distance": 9.5,
+      "elevation_gain": 2601,
+      "difficulty": "Hard",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Mock",
+      "name": "Dignissimos Ducimus",
+      "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.",
+      "distance": 6.4,
+      "elevation_gain": 1208,
+      "difficulty": "Hard",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Mock",
+      "name": "Lorem Ipsum",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "distance": 6.4,
+      "elevation_gain": 1208,
+      "difficulty": "Moderate",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Mock",
+      "name": "Dignissimos Ducimus",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit.",
+      "distance": 3.4,
+      "elevation_gain": 725,
+      "difficulty": "Moderate",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Mock",
+      "name": "Sit Amet",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi.",
+      "distance": 1.7,
+      "elevation_gain": 312,
+      "difficulty": "Easy",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Mock",
+      "name": "Sit Amet",
+      "description": "Nulla posuere sollicitudin aliquam ultrices sagittis orci. Sem viverra aliquet eget sit. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam erat.",
+      "distance": 28.2,
+      "elevation_gain": 6337,
+      "difficulty": "Hard",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Mock",
+      "name": "Diam Donec",
+      "description": "Ut venenatis tellus in metus vulputate. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Leo integer malesuada nunc vel. Diam sit amet nisl suscipit adipiscing bibendum.",
+      "distance": 2,
+      "elevation_gain": 108,
+      "difficulty": "Easy",
+      "latitude": 124.567,
+      "longitude": 789.789
+    },
+    {
+      "park": "Mock",
+      "name": "Non Blandit",
+      "description": "Massa enim nec dui nunc mattis enim. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Ipsum dolor sit amet consectetur adipiscing.",
+      "distance": 3.5,
+      "elevation_gain": 985,
+      "difficulty": "Easy",
+      "latitude": 124.567,
+      "longitude": 789.789
+    }
   ]
   
