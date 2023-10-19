@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 
 enum NationalPark { yellowStone, yosemite, rainier }
 
-class ParksCardList extends StatefulWidget {
+class ParksList extends StatefulWidget {
   final void Function(String park) setPark;
   final bool darkMode;
 
-  const ParksCardList(this.darkMode, {super.key, required this.setPark});
+  const ParksList(this.darkMode, {super.key, required this.setPark});
   @override
-  State<ParksCardList> createState() => ParksCardListState();
+  State<ParksList> createState() => ParksListState();
 }
 
-class ParksCardListState extends State<ParksCardList> {
+class ParksListState extends State<ParksList> {
   @override
   Widget build(BuildContext context) {
     return Column(

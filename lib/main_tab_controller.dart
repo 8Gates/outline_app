@@ -3,7 +3,7 @@ import 'package:outline_app/screens/screen3.dart';
 import 'package:outline_app/screens/screen2.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'main_drawer.dart';
-import 'lists/parks_card_list.dart';
+import 'lists/parks_list.dart';
 
 
 class MainTabController extends StatefulWidget {
@@ -76,7 +76,7 @@ class _MainTabControllerState extends State<MainTabController> {
             TabBarView(children: [
               Align(
                 alignment: Alignment.center, 
-                child: ParksCardList(darkMode, setPark: setPark)
+                child: ParksList(darkMode, setPark: setPark)
               ),
               SecondScreen(darkMode, park),
               ThirdScreen(darkMode),

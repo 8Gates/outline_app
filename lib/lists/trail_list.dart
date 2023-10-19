@@ -1,8 +1,6 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:outline_app/map_widget.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import '../config.dart';
 
 class TrailList extends StatelessWidget {
   final Future<List<Map<String, dynamic>>> trailsFuture;
@@ -56,7 +54,7 @@ class ExpandingCard extends StatefulWidget {
   final String description;
   final double latitude;
   final double longitude;
-  final String mapKey = "API_KEY_HERE";
+  final String mapKey = apiKey;
 
   const ExpandingCard(this.id, this.name, this.park, this.distance, this.elevation, this.difficulty, this.description, this.latitude, this.longitude, {super.key});
 
@@ -76,7 +74,7 @@ class ExpandingCard extends StatefulWidget {
       Text('Elevation Gain: $elevation ft'),
       Text('Difficulty: $difficulty'),
       Text('Description: $description'),
-      id == 1 && mapKey != "API_KEY_HERE" ? Center(child: 
+      id == 1 ? Center(child: 
         Image.network(
           'https://maps.googleapis.com/maps/api/staticmap?center=$latitude,$longitude&zoom=10&size=400x400&markers=$latitude,$longitude&key=$mapKey',
         )
@@ -108,7 +106,7 @@ class _ExpandingCardState extends State<ExpandingCard> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: isExpanded ? widget.expandedContent(widget.id, widget.latitude, widget.longitude) : widget.compressedContent()
         ),
-        trailing: IconButton(
+        trailing: isExpanded ? null : IconButton(
           icon: Icon(isExpanded ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down),
           onPressed: toggleExpanded,
         ),
