@@ -3,7 +3,7 @@ import 'package:outline_app/screens/screen3.dart';
 import 'package:outline_app/screens/screen2.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'main_drawer.dart';
-import 'lists/parks_card_list.dart';
+import 'lists/parks_list.dart';
 
 
 class MainTabController extends StatefulWidget {
@@ -32,18 +32,12 @@ class _MainTabControllerState extends State<MainTabController> {
   }
 
   void initSharedPreferences() async{
-    // late bool initDark = false;
-    // late String initPark;
     final SharedPreferences preferences = await SharedPreferences.getInstance();
-    // preferences.getBool('darkMode') == null ? preferences.setBool('darkMode', false) : initDark = preferences.getBool('darkMode')!;
-    // preferences.getString('park') == null ? preferences.setString('park', 'Yellow Stone') : initPark = preferences.getString('park')!;
     setState(() {
       darkMode = preferences.getBool('darkMode') == null ? false : preferences.getBool('darkMode')!;
       preferences.setBool('darkMode', darkMode);
-      //darkMode = initDark;
       park = preferences.getString('park') == null ? 'Yellow Stone' : preferences.getString('park')!;
       preferences.setString('park', park);
-      //park = initPark;
     });
   }
 
@@ -82,7 +76,7 @@ class _MainTabControllerState extends State<MainTabController> {
             TabBarView(children: [
               Align(
                 alignment: Alignment.center, 
-                child: ParksCardList(darkMode, setPark: setPark)
+                child: ParksList(darkMode, setPark: setPark)
               ),
               SecondScreen(darkMode, park),
               ThirdScreen(darkMode),

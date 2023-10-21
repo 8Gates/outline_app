@@ -6,8 +6,8 @@
       "distance": 1.5,
       "elevation_gain": 200,
       "difficulty": "Easy",
-      "latitude": 123.456,
-      "longitude": 789.012
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Yellow Stone",
@@ -16,8 +16,8 @@
       "distance": 4.9,
       "elevation_gain": 357,
       "difficulty": "Easy",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Yellow Stone",
@@ -26,8 +26,8 @@
       "distance": 3.5,
       "elevation_gain": 606,
       "difficulty": "Moderate",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Yellow Stone",
@@ -36,8 +36,8 @@
       "distance": 4.8,
       "elevation_gain": 170,
       "difficulty": "Easy",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Yellow Stone",
@@ -46,8 +46,8 @@
       "distance": 4.1,
       "elevation_gain": 459,
       "difficulty": "Moderate",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Yellow Stone",
@@ -56,8 +56,8 @@
       "distance": 0.7,
       "elevation_gain": 265,
       "difficulty": "Moderate",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Yellow Stone",
@@ -66,8 +66,8 @@
       "distance": 2.5,
       "elevation_gain": 278,
       "difficulty": "Easy",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Yosemite",
@@ -86,8 +86,8 @@
       "distance": 16.5,
       "elevation_gain": 5305,
       "difficulty": "Hard",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Yosemite",
@@ -96,8 +96,8 @@
       "distance": 6.6,
       "elevation_gain": 3254,
       "difficulty": "Hard",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Yosemite",
@@ -106,8 +106,8 @@
       "distance": 3.1,
       "elevation_gain": 1131,
       "difficulty": "Hard",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Yosemite",
@@ -116,8 +116,8 @@
       "distance": 1.2,
       "elevation_gain": 55,
       "difficulty": "Easy",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Yosemite",
@@ -126,8 +126,8 @@
       "distance": 9.7,
       "elevation_gain": 3418,
       "difficulty": "Hard",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Yosemite",
@@ -136,8 +136,8 @@
       "distance": 2.2,
       "elevation_gain": 1013,
       "difficulty": "Moderate",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Rainier",
@@ -156,8 +156,8 @@
       "distance": 5.7,
       "elevation_gain": 1108,
       "difficulty": "Moderate",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Rainier",
@@ -166,8 +166,8 @@
       "distance": 2.9,
       "elevation_gain": 521,
       "difficulty": "Easy",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Rainier",
@@ -176,8 +176,8 @@
       "distance": 5.6,
       "elevation_gain": 1555,
       "difficulty": "Moderate",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Rainier",
@@ -186,8 +186,8 @@
       "distance": 3.8,
       "elevation_gain": 1322,
       "difficulty": "Hard",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Rainier",
@@ -196,8 +196,8 @@
       "distance": 3.5,
       "elevation_gain": 659,
       "difficulty": "Moderate",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Rainier",
@@ -206,8 +206,8 @@
       "distance": 9.5,
       "elevation_gain": 2601,
       "difficulty": "Hard",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Mock",
@@ -216,8 +216,8 @@
       "distance": 6.4,
       "elevation_gain": 1208,
       "difficulty": "Hard",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Mock",
@@ -226,8 +226,8 @@
       "distance": 6.4,
       "elevation_gain": 1208,
       "difficulty": "Moderate",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Mock",
@@ -236,8 +236,8 @@
       "distance": 3.4,
       "elevation_gain": 725,
       "difficulty": "Moderate",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Mock",
@@ -246,8 +246,8 @@
       "distance": 1.7,
       "elevation_gain": 312,
       "difficulty": "Easy",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Mock",
@@ -256,8 +256,8 @@
       "distance": 28.2,
       "elevation_gain": 6337,
       "difficulty": "Hard",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Mock",
@@ -266,8 +266,8 @@
       "distance": 2,
       "elevation_gain": 108,
       "difficulty": "Easy",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     },
     {
       "park": "Mock",
@@ -276,8 +276,8 @@
       "distance": 3.5,
       "elevation_gain": 985,
       "difficulty": "Easy",
-      "latitude": 124.567,
-      "longitude": 789.789
+      "latitude": 44.528368,
+      "longitude": -110.836026
     }
   ]
   

@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 
 enum NationalPark { yellowStone, yosemite, rainier }
 
-class ParksCardList extends StatefulWidget {
+class ParksList extends StatefulWidget {
   final void Function(String park) setPark;
   final bool darkMode;
 
-  const ParksCardList(this.darkMode, {super.key, required this.setPark});
+  const ParksList(this.darkMode, {super.key, required this.setPark});
   @override
-  State<ParksCardList> createState() => ParksCardListState();
+  State<ParksList> createState() => ParksListState();
 }
 
-class ParksCardListState extends State<ParksCardList> {
+class ParksListState extends State<ParksList> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -146,6 +146,18 @@ class ParksCardListState extends State<ParksCardList> {
 
 
 boxDecorationDark(bool b){
-  if(b) return const BoxDecoration(gradient: LinearGradient(colors: [Color.fromARGB(255, 46, 46, 46), Color.fromARGB(255, 155, 155, 155), Color.fromARGB(255, 46, 46, 46)]));
-  return const BoxDecoration(gradient: LinearGradient(colors: [Color.fromARGB(255, 199, 199, 199), Color.fromARGB(255, 255, 255, 255), Color.fromARGB(255, 199, 199, 199)]));
+  // box decoration for dark / light mode 
+  if(b) {
+    return const BoxDecoration(
+    gradient: LinearGradient(
+      colors: [Color.fromARGB(255, 46, 46, 46), Color.fromARGB(255, 155, 155, 155), Color.fromARGB(255, 46, 46, 46)]
+      )
+    );
+  } else{
+  return const BoxDecoration(
+    gradient: LinearGradient(
+      colors: [Color.fromARGB(255, 199, 199, 199), Color.fromARGB(255, 255, 255, 255), Color.fromARGB(255, 199, 199, 199)]
+      )
+    );
+  }
 }
