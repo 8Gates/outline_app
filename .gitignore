@@ -44,5 +44,4 @@ app.*.map.json
 /android/app/release
 
 # Key storage 
-/config.dart
-/lib/config.dart
+config.dart

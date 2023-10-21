@@ -20,9 +20,15 @@
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
               />
+            <!-- @string/API_KEY is accessible here due to resValue within build.gradle buildTypes -->
             <meta-data
               android:name="com.google.android.geo.API_KEY"
-              android:value="API_KEY_HERE"
+              android:value="@string/API_KEY"
+              />
+            <!-- @string/API_KEY is accessible here due to resValue within build.gradle buildTypes -->
+            <meta-data
+              android:name="api_key"
+              android:value="@string/API_KEY"
               />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

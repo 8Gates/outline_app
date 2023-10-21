@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import '../config.dart';
+import 'package:outline_app/config.dart';
 
 class TrailList extends StatelessWidget {
   final Future<List<Map<String, dynamic>>> trailsFuture;
@@ -13,15 +13,14 @@ class TrailList extends StatelessWidget {
       future: trailsFuture,
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          // While the future is still running, show a loading indicator or some other UI.
-          return const CircularProgressIndicator(); // or any loading widget
+          // While the future is still running, show a loading indicator
+          return const CircularProgressIndicator(strokeWidth: 20);
         } else if (snapshot.hasError) {
-          // If there's an error, you can display an error message here.
-          return Text('Error: ${snapshot.error}');
+            // If there's an error, display an error message here
+            return Text('Error: ${snapshot.error}');
         } else {
-          final List<Map<String, dynamic>> trails = snapshot.data ?? [];
-          return ListView.builder(
-            // shrinkWrap: true, // Set shrinkWrap to true
+            final List<Map<String, dynamic>> trails = snapshot.data ?? [];
+            return ListView.builder(
             itemCount: trails.length,
             itemBuilder: (BuildContext context, int index) {
               final int id = trails[index]['id'];
@@ -34,7 +33,6 @@ class TrailList extends StatelessWidget {
               final double latitude = trails[index]['latitude'];
               final double longitude = trails[index]['longitude'];
 
-              // Exclude longitude, latitude, and description fields
               return ExpandingCard(id, name, park, distance, elevationGain, difficulty, description, latitude, longitude);
             },
           );
@@ -74,12 +72,11 @@ class ExpandingCard extends StatefulWidget {
       Text('Elevation Gain: $elevation ft'),
       Text('Difficulty: $difficulty'),
       Text('Description: $description'),
-      id == 1 ? Center(child: 
+      Center(child: 
         Image.network(
           'https://maps.googleapis.com/maps/api/staticmap?center=$latitude,$longitude&zoom=10&size=400x400&markers=$latitude,$longitude&key=$mapKey',
         )
       )
- : const Text('')
     ];
   }
 

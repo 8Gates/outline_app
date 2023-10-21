@@ -1,5 +1,9 @@
 def localProperties = new Properties()
-def localPropertiesFile = rootProject.file('local.properties')
+def localPropertiesFile = rootProject.file('local.properties')  
+// key.properties file needed for google maps, run 'rps gen' for file creation
+def apiKeyPropertiesFile = file('key.properties')
+def apiKey = apiKeyPropertiesFile.exists() ? apiKeyPropertiesFile.text.trim() : null
+
 if (localPropertiesFile.exists()) {
     localPropertiesFile.withReader('UTF-8') { reader ->
         localProperties.load(reader)
@@ -43,6 +47,11 @@ android {
     }
 
     defaultConfig {
+        /* 
+        apiKey retreived from key.properties, if errors are encountered:
+            - ensure lib/config.dart exists w/line 1: const String apiKey = "YOUR_API_KEY";
+            - enter command 'rps gen' to run script referenced in pubspec.yaml 
+        */
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.outline_app"
         // You can update the following values to match your application needs.
@@ -51,14 +60,15 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        resValue "string", "API_KEY", "\"$apiKey\""
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
-        }
+            resValue "string", "API_KEY", "\"$apiKey\""
+        }         
     }
 }
 

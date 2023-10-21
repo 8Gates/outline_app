@@ -72,3 +72,7 @@ flutter:
     - family: Road_Rage
       fonts:
         - asset: assets\fonts\Road_Rage.otf
+
+scripts:
+  #script required to retrieve api key from config,
+  gen: "dart generate_gradle_properties.dart"

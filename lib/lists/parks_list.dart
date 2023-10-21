@@ -146,6 +146,18 @@ class ParksListState extends State<ParksList> {
 
 
 boxDecorationDark(bool b){
-  if(b) return const BoxDecoration(gradient: LinearGradient(colors: [Color.fromARGB(255, 46, 46, 46), Color.fromARGB(255, 155, 155, 155), Color.fromARGB(255, 46, 46, 46)]));
-  return const BoxDecoration(gradient: LinearGradient(colors: [Color.fromARGB(255, 199, 199, 199), Color.fromARGB(255, 255, 255, 255), Color.fromARGB(255, 199, 199, 199)]));
+  // box decoration for dark / light mode 
+  if(b) {
+    return const BoxDecoration(
+    gradient: LinearGradient(
+      colors: [Color.fromARGB(255, 46, 46, 46), Color.fromARGB(255, 155, 155, 155), Color.fromARGB(255, 46, 46, 46)]
+      )
+    );
+  } else{
+  return const BoxDecoration(
+    gradient: LinearGradient(
+      colors: [Color.fromARGB(255, 199, 199, 199), Color.fromARGB(255, 255, 255, 255), Color.fromARGB(255, 199, 199, 199)]
+      )
+    );
+  }
 }
