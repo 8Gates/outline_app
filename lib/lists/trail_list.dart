@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:outline_app/config.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 
 class TrailList extends StatelessWidget {
   final Future<List<Map<String, dynamic>>> trailsFuture;
@@ -72,9 +74,14 @@ class ExpandingCard extends StatefulWidget {
       Text('Elevation Gain: $elevation ft'),
       Text('Difficulty: $difficulty'),
       Text('Description: $description'),
-      Center(child: 
-        Image.network(
-          'https://maps.googleapis.com/maps/api/staticmap?center=$latitude,$longitude&zoom=10&size=400x400&markers=$latitude,$longitude&key=$mapKey',
+      Center(child:
+        GestureDetector( 
+          onTap: (){
+            openGoogleMaps(latitude.toString(), longitude.toString());
+          },
+          child: Image.network(
+            'https://maps.googleapis.com/maps/api/staticmap?center=$latitude,$longitude&zoom=10&size=400x400&markers=$latitude,$longitude&key=$mapKey',
+          )
         )
       )
     ];
@@ -110,5 +117,14 @@ class _ExpandingCardState extends State<ExpandingCard> {
         onTap: toggleExpanded,
       )
     );
+  }
+}
+
+void openGoogleMaps(String latitude, String longitude) async {
+  final Uri googleMapsUri = Uri.https('www.google.com', '/maps', {'q': '$latitude,$longitude'});
+  if (await canLaunchUrl(googleMapsUri)) {
+    await launchUrl(googleMapsUri);
+  } else {
+    throw 'Could not launch Google Maps.';
   }
 }
