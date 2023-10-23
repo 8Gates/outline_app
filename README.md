@@ -8,6 +8,7 @@ Features of note at this time include:
     settings using shared preferences
   - SQFlite database storing park and trail data
   - Google map's static maps for trailheads
+  - tapping a static map opens Google Maps app with coordinates
   - stateful trail list widget for expanding and compressing cards
     with trail data and maps
 
