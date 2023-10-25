@@ -4,15 +4,21 @@ import 'package:outline_app/config.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
-class TrailList extends StatelessWidget {
+class TrailList extends StatefulWidget {
+  final bool darkMode;
   final Future<List<Map<String, dynamic>>> trailsFuture;
 
-  const TrailList({super.key, required this.trailsFuture});
+  const TrailList(this.darkMode, {super.key, required this.trailsFuture});
 
+  @override
+  State<TrailList> createState() => _TrailListState();
+}
+
+class _TrailListState extends State<TrailList> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<Map<String, dynamic>>>(
-      future: trailsFuture,
+      future: widget.trailsFuture,
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           // While the future is still running, show a loading indicator
@@ -35,7 +41,7 @@ class TrailList extends StatelessWidget {
               final double latitude = trails[index]['latitude'];
               final double longitude = trails[index]['longitude'];
 
-              return ExpandingCard(id, name, park, distance, elevationGain, difficulty, description, latitude, longitude);
+              return ExpandingCard(id, name, park, distance, elevationGain, difficulty, description, latitude, longitude, widget.darkMode);
             },
           );
         }
@@ -54,9 +60,10 @@ class ExpandingCard extends StatefulWidget {
   final String description;
   final double latitude;
   final double longitude;
+  final bool dark;
   final String mapKey = apiKey;
 
-  const ExpandingCard(this.id, this.name, this.park, this.distance, this.elevation, this.difficulty, this.description, this.latitude, this.longitude, {super.key});
+  const ExpandingCard(this.id, this.name, this.park, this.distance, this.elevation, this.difficulty, this.description, this.latitude, this.longitude, this.dark, {super.key});
 
   compressedContent(){
     return [ 
@@ -103,8 +110,10 @@ class _ExpandingCardState extends State<ExpandingCard> {
   @override
   Widget build(BuildContext context) {
     String name = widget.name;
-    return Card(child: 
-      ListTile(
+    return Card(
+      color: widget.dark==true?Colors.black26 : Colors.white,
+      child: ListTile(
+        textColor: widget.dark==true?Colors.white : Colors.black87,
         title: Text('$name Trail'),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

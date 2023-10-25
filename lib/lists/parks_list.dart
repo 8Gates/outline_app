@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:outline_app/models/parks_info_temp.dart';
 
 
 enum NationalPark { yellowStone, yosemite, rainier }
@@ -6,8 +7,9 @@ enum NationalPark { yellowStone, yosemite, rainier }
 class ParksList extends StatefulWidget {
   final void Function(String park) setPark;
   final bool darkMode;
+  final tempParkData = ParkInfo().tempParkData;
 
-  const ParksList(this.darkMode, {super.key, required this.setPark});
+  ParksList(this.darkMode, {super.key, required this.setPark});
   @override
   State<ParksList> createState() => ParksListState();
 }
@@ -33,110 +35,14 @@ class ParksListState extends State<ParksList> {
           )
         ),
         Expanded(child: SingleChildScrollView(child: Column(children: <Widget>[
-          Card(
-            child: ListTile(
-              leading: Image.asset('assets/images/yellowstone.jpg'),
-              title: const Text('Yellow Stone'),
-              subtitle: const Text('A nearly 3,500-sq.-mile wilderness recreation area atop a volcanic hot spot.'),
-              trailing: const Icon(Icons.arrow_forward_ios_outlined),
-              onTap: () { 
-                widget.setPark("Yellow Stone");
-                DefaultTabController.of(context).animateTo(1);
-              },
-              isThreeLine: true,
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Image.asset('assets/images/yosemite.jpg'),
-              title: const Text('Yosemite'),
-              subtitle: const Text('Sierra Nevada, giant sequoias, towering falls and the granite cliffs of Half Dome'),
-              trailing: const Icon(Icons.arrow_forward_ios_outlined),
-              onTap: () {
-                widget.setPark("Yosemite"); 
-                DefaultTabController.of(context).animateTo(1); 
-              },
-              isThreeLine: true,
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Image.asset('assets/images/rainier.jpg'),
-              title: const Text('Rainier'),
-              subtitle: const Text('Alpine glaciers and the highest volcanic peak in the contiguous United States.'),
-              trailing: const Icon(Icons.arrow_forward_ios_outlined),
-              onTap: () { 
-                widget.setPark("Rainier"); 
-                DefaultTabController.of(context).animateTo(1);
-              },
-              isThreeLine: true,
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Image.asset('assets/images/rockyMountains.jpg'),
-              title: const Text('Rocky Mountain'),
-              subtitle: const Text('Alpine glaciers and the highest volcanic peak in the contiguous United States.'),
-              trailing: const Icon(Icons.arrow_forward_ios_outlined),
-              onTap: () { 
-                widget.setPark("Mock"); 
-                DefaultTabController.of(context).animateTo(1);
-              },
-              isThreeLine: true,
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Image.asset('assets/images/acadia.jpg'),
-              title: const Text('Acadia'),
-              subtitle: const Text('Alpine glaciers and the highest volcanic peak in the contiguous United States.'),
-              trailing: const Icon(Icons.arrow_forward_ios_outlined),
-              onTap: () { 
-                widget.setPark("Mock"); 
-                DefaultTabController.of(context).animateTo(1);
-              },
-              isThreeLine: true,
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Image.asset('assets/images/zion.jpg'),
-              title: const Text('Zion'),
-              subtitle: const Text('Alpine glaciers and the highest volcanic peak in the contiguous United States.'),
-              trailing: const Icon(Icons.arrow_forward_ios_outlined),
-              onTap: () { 
-                widget.setPark("Mock"); 
-                DefaultTabController.of(context).animateTo(1);
-              },
-              isThreeLine: true,
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Image.asset('assets/images/glacier.jpg'),
-              title: const Text('Glacier'),
-              subtitle: const Text('Alpine glaciers and the highest volcanic peak in the contiguous United States.'),
-              trailing: const Icon(Icons.arrow_forward_ios_outlined),
-              onTap: () { 
-                widget.setPark("Mock"); 
-                DefaultTabController.of(context).animateTo(1);
-              },
-              isThreeLine: true,
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Image.asset('assets/images/denali.jpg'),
-              title: const Text('Denali'),
-              subtitle: const Text('Alpine glaciers and the highest volcanic peak in the contiguous United States.'),
-              trailing: const Icon(Icons.arrow_forward_ios_outlined),
-              onTap: () { 
-                widget.setPark("Mock"); 
-                DefaultTabController.of(context).animateTo(1);
-              },
-              isThreeLine: true,
-            )
-          )
+          parkCard('yellowstone', 'Yellow Stone','Yellow Stone', widget.tempParkData[0], widget.setPark, context, widget.darkMode),
+          parkCard('yosemite', 'Yosemite','Yosemite', widget.tempParkData[1], widget.setPark, context, widget.darkMode),
+          parkCard('rainier', 'Rainier','Rainier', widget.tempParkData[2], widget.setPark, context, widget.darkMode),
+          parkCard('rockyMountains', 'Rocky Mountains','Mock', widget.tempParkData[3], widget.setPark, context, widget.darkMode),
+          parkCard('acadia', 'Acadia','Mock', widget.tempParkData[5], widget.setPark, context, widget.darkMode),
+          parkCard('zion', 'Zion','Mock', widget.tempParkData[5], widget.setPark, context, widget.darkMode),
+          parkCard('glacier', 'Glacier','Mock', widget.tempParkData[6], widget.setPark, context, widget.darkMode),
+          parkCard('denali', 'Denali','Mock', widget.tempParkData[7], widget.setPark, context, widget.darkMode),
         ])
         ))
       ]
@@ -144,9 +50,8 @@ class ParksListState extends State<ParksList> {
   }
 }
 
-
 boxDecorationDark(bool b){
-  // box decoration for dark / light mode 
+  // box decoration, above the cards, list for dark / light mode 
   if(b) {
     return const BoxDecoration(
     gradient: LinearGradient(
@@ -160,4 +65,22 @@ boxDecorationDark(bool b){
       )
     );
   }
+}
+
+parkCard(String imageName, String title, String parkSet, String about, Function(String park) setPark, BuildContext context, bool b){
+  return Card(
+    color: b==true?Colors.black26 : Colors.white,
+    child: ListTile(
+      textColor: b==true?Colors.white : Colors.black87,
+      leading: Image.asset('assets/images/$imageName.jpg'),
+      title: Text(title),
+      subtitle: Text(about),
+      trailing: const Icon(Icons.arrow_forward_ios_outlined),
+      onTap: () { 
+        setPark(parkSet); 
+        DefaultTabController.of(context).animateTo(1);
+      },
+      isThreeLine: true,
+    )
+  );
 }

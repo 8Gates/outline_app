@@ -8,10 +8,10 @@ import 'lists/parks_list.dart';
 
 class MainTabController extends StatefulWidget {
   static const tabs = [
-    Tab(icon: Icon(Icons.home)),
-    Tab(icon: Icon(Icons.sunny_snowing)),
-    Tab(icon: Icon(Icons.edit_note)),
-    Tab(icon: Icon(Icons.dangerous)),
+    Tab(icon: Icon(Icons.filter_hdr_sharp, size: 38.0)),
+    Tab(icon: Icon(Icons.explore, size: 32.0)),
+    Tab(icon: Icon(Icons.web, size: 38.0)),
+    Tab(icon: Icon(Icons.dangerous, size: 38.0)),
   ];
 
   const MainTabController({super.key});

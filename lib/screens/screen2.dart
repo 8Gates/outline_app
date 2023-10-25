@@ -70,7 +70,7 @@ class _SecondScreenState extends State<SecondScreen> {
       body: 
         FractionallySizedBox(
           heightFactor: 0.8, 
-          child: TrailList(trailsFuture: ReadDatabase().getTrailsData(widget.park))
+          child: TrailList(widget.darkMode, trailsFuture: ReadDatabase().getTrailsData(widget.park))
         ),
         floatingActionButton: const FractionallySizedBox(
           widthFactor: 0.92, 
