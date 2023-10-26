@@ -12,8 +12,6 @@ class MapScreen extends StatefulWidget {
 }
 
 class _MapScreenState extends State<MapScreen> {
-  late GoogleMapController _controller;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +20,6 @@ class _MapScreenState extends State<MapScreen> {
       ),
       body: GoogleMap(
         onMapCreated: (controller) {
-          _controller = controller;
         },
         initialCameraPosition: CameraPosition(
           target: LatLng(widget.latitude, widget.longitude),
